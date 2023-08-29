@@ -1,0 +1,19 @@
+{
+  "name": "@el-presets/components",
+  "version": "1.0.0",
+  "description": "el-presets基础组件以及预设套件",
+  "main": "index.ts",
+  "keywords": [],
+  "author": "yanxi",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.58.0",
+    "vue": "^2.7.14"
+  },
+  "devDependencies": {
+    "element-ui": "^2.15.14",
+    "typescript": "^3.9.10",
+    "vue": "^2.7.14",
+    "vue-property-decorator": "^8.5.1"
+  }
+}

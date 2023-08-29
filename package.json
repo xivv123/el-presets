@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "description": "el-presets组件库",
+  "keywords": [],
+  "author": "yanxi",
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "^1.7.3"
+  }
+}

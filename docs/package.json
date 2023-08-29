@@ -1,0 +1,24 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs --port 8080",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "el-presets": "workspace:^1.0.0",
+    "vitepress": "1.0.0-alpha.45",
+    "vitepress-theme-demoblock": "^2.0.1",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@iconify-json/ic": "1.1.4",
+    "unocss": "0.45.6"
+  }
+}
