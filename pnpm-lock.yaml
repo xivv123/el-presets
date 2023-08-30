@@ -17,6 +17,9 @@ importers:
       el-presets:
         specifier: workspace:^
         version: link:../../packages/ui
+      element-plus:
+        specifier: ^2.3.12
+        version: 2.3.12(vue@3.2.47)
       vue:
         specifier: ^3.2.45
         version: registry.npmmirror.com/vue@3.2.47
@@ -230,7 +233,7 @@ packages:
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      vue: 3.2.47
+      vue: registry.npmmirror.com/vue@3.2.47
     dev: false
 
   /@esbuild/android-arm64@0.16.17:
@@ -1245,7 +1248,7 @@ packages:
       lodash-unified: 1.0.3(@types/lodash-es@4.17.8)(lodash-es@4.17.21)(lodash@4.17.21)
       memoize-one: 6.0.0
       normalize-wheel-es: 1.2.0
-      vue: 3.2.47
+      vue: registry.npmmirror.com/vue@3.2.47
     transitivePeerDependencies:
       - '@vue/composition-api'
     dev: false
@@ -2712,7 +2715,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vue: 3.2.47
+      vue: registry.npmmirror.com/vue@3.2.47
     dev: false
 
   /vue-property-decorator@8.5.1(vue@3.2.47):

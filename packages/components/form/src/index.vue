@@ -1,14 +1,28 @@
 <template>
-  <el-form ref="formCommon" :model="form" :label-width="labelWidth">
+  <el-form 
+    ref="formCommon" 
+    :model="form" 
+    :rules="rules" 
+    :label-width="labelWidth" 
+    label-position="right"
+    :validateOnRuleChange="false"
+  >
     <el-row :gutter="20">
-      <el-col :span="(field.col ? field.col : 12) || 24" v-for="field in fields" :key="field.label">
-        <el-form-item :label="field.label + ':'" class="form-item-bottom">
+      <el-col 
+        :span="(field.col ? field.col : 12) || 24" 
+        v-for="field in fields" 
+        :key="field.label"
+      >
+        <el-form-item 
+          :label="field.label + ':'" 
+          class="form-item-bottom" 
+          :prop="field.transKey"
+        >
           <el-input
             v-if="field.type === 'input' && field.transKey" 
             v-model="form[field.transKey]" 
             @input="updateForm"
             :style="{width: field.inputStyleLength + 'px'}"
-            clearable
           />
           <el-select 
             v-else-if="field.type === 'select' && field.transKey" 
@@ -39,6 +53,7 @@
         </el-form-item>
       </el-col>
     </el-row>
+    <el-button @click="validateForm">提交</el-button>
   </el-form>
 </template>
 
@@ -46,6 +61,7 @@
 import { ref, computed, onMounted, PropType } from 'vue';
 import { ElForm, ElFormItem, ElInput, ElSelect, ElOption, ElButton, ElRow, ElCol } from 'element-plus';
 
+// 定义fields，数组对象的接口
 interface Field {
   label: string;
   type: string;
@@ -76,6 +92,7 @@ const props = defineProps({
 const emit = defineEmits(['up']);
 
 const form = ref<{ [key: string]: any }>({});
+const rules = ref<{ [key: string]: any[] }>({});
 const keyFlag = ref(true);
 
 const computedVals = computed(() => {
@@ -93,11 +110,26 @@ onMounted(() => {
     if (field.isTran === true) {
       form.value[field.transKey] = field.transVal;
     }
+    if (field.rules) {
+      rules.value[field.transKey] = field.rules;
+    }
   });
 });
 
 const updateForm = () => {
   emit('up', form.value);
+};
+
+const validateForm = () => {
+  const formRef = ref.value;
+  formRef.validate((valid: boolean) => {
+    if (valid) {
+      // 如果表单验证通过，执行你的代码
+    } else {
+      // 如果表单验证失败，执行你的代码
+      return false;
+    }
+  });
 };
 </script>
 
