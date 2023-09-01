@@ -1,4 +1,3 @@
-// import Vue from 'vue'
 import elPresetsForm from './src/index.vue'
 
 const elPresetsFormInstall = {
@@ -6,8 +5,6 @@ const elPresetsFormInstall = {
     Vue.component('elPresets-form', elPresetsForm)
   }
 }
-
-// Vue.use(elPresetsFormInstall)
 
 export default elPresetsFormInstall
 export { elPresetsForm }

@@ -1,5 +1,8 @@
 
 import { elPresetsForm } from '@el-presets/components/form'
+import { elPresetsAsyncButton } from '@el-presets/components/button'
+import { elPresetsCtrl } from '@el-presets/components/ctrl'
+
 import Components from './components'
 // import { App } from 'vue'
 import 'uno.css'
@@ -12,4 +15,4 @@ const Installer = {
 }
 
 export default Installer
-export { elPresetsForm }
+export { elPresetsForm, elPresetsAsyncButton, elPresetsCtrl }

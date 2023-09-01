@@ -105,12 +105,6 @@ importers:
         specifier: ^4.0.4
         version: 4.1.1
 
-  packages/hooks:
-    dependencies:
-      vue:
-        specifier: ^3.2.00
-        version: 3.2.47
-
   packages/ui:
     dependencies:
       '@el-presets/components':

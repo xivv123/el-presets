@@ -119,18 +119,19 @@ onMounted(() => {
 const updateForm = () => {
   emit('up', form.value);
 };
+const formRef = ref(null);
 
 const validateForm = () => {
-  const formRef = ref.value;
-  formRef.validate((valid: boolean) => {
+  formRef.value.validate((valid: boolean) => {
     if (valid) {
       // 如果表单验证通过，执行你的代码
+      return true;
     } else {
       // 如果表单验证失败，执行你的代码
       return false;
     }
   });
-};
+}
 </script>
 
 <style scoped>
